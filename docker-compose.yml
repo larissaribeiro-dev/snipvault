@@ -1,0 +1,12 @@
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      SNIPVAULT_SECRET_KEY: ${SNIPVAULT_SECRET_KEY:?defina SNIPVAULT_SECRET_KEY no .env}
+    volumes:
+      - snipvault-data:/data
+
+volumes:
+  snipvault-data:
