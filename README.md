@@ -6,7 +6,7 @@
 
 API REST para guardar, buscar e compartilhar trechos de código. Cada pessoa tem sua conta, organiza os snippets com tags, escolhe o que fica privado e o que vira público, e encontra tudo depois com busca por texto, linguagem e tag.
 
-O mais interessante é a organização: rotas, regras de negócio e acesso a dados ficam em camadas separadas, a autenticação usa JWT com `scrypt` da biblioteca padrão (sem dependências nativas) e a aplicação é criada por uma *app factory*, o que deixa os testes rápidos e isolados, sem mocks.
+Todas as rotas, regras de negócio e acesso a dados ficam em camadas separadas, a autenticação usa JWT com `scrypt` da biblioteca padrão (sem dependências nativas) e a aplicação é criada por uma *app factory*, perimite deixar os testes rápidos e isolados, sem mocks.
 
 ```
 $ curl -s -X POST localhost:8000/snippets \
